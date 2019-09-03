@@ -15,8 +15,7 @@ public class EffAuthForceUnregister extends Effect {
 
     @SuppressWarnings("unchecked")
     @Override
-    public boolean init(Expression<?>[] expr, int matchedPattern, Kleenean paramKleenean,
-                        SkriptParser.ParseResult paramParseResult) {
+    public boolean init(Expression<?>[] expr, int matchedPattern, Kleenean paramKleenean, SkriptParser.ParseResult paramParseResult) {
         player = (Expression<Player>) expr[0];
 
         return true;
@@ -24,7 +23,7 @@ public class EffAuthForceUnregister extends Effect {
 
     @Override
     public String toString(@Nullable Event paramEvent, boolean paramBoolean) {
-        return "force logout %player%";
+        return "force %player% to unregister";
     }
 
     @Override

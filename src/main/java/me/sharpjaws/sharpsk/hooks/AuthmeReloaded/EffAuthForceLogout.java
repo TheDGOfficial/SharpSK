@@ -15,8 +15,7 @@ public class EffAuthForceLogout extends Effect {
 
     @SuppressWarnings("unchecked")
     @Override
-    public boolean init(Expression<?>[] expr, int matchedPattern, Kleenean paramKleenean,
-                        SkriptParser.ParseResult paramParseResult) {
+    public boolean init(Expression<?>[] expr, int matchedPattern, Kleenean paramKleenean, SkriptParser.ParseResult paramParseResult) {
         player = (Expression<Player>) expr[0];
 
         return true;

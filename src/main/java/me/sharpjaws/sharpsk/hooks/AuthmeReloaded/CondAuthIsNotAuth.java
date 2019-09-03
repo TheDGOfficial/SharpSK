@@ -16,7 +16,7 @@ public class CondAuthIsNotAuth extends Condition {
     @SuppressWarnings("unchecked")
     @Override
     public boolean init(Expression<?>[] expr, int matchedPattern, Kleenean arg2, SkriptParser.ParseResult arg3) {
-        p = (Expression<Player>) expr[0];
+        player = (Expression<Player>) expr[0];
         return true;
     }
 

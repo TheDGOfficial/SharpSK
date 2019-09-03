@@ -40,25 +40,23 @@ public class AuthmeRegistry {
                         return e.getPlayer();
                     }
                 }, 0);
-        Skript.registerEvent("Authme inventory restore", SimpleEvent.class, RestoreInventoryEvent.class,
-                "authme inventory restore");
-        EventValues.registerEventValue(RestoreInventoryEvent.class, Player.class,
-                new Getter<Player, RestoreInventoryEvent>() {
-                    @Override
-                    @Nullable
-                    public Player get(RestoreInventoryEvent e) {
-                        return e.getPlayer();
-                    }
-                }, 0);
-        Skript.registerExpression(ExprHashedPasswordOf.class, String.class, ExpressionType.PROPERTY,
-                "[authme] hashed password of %player%");
+        Skript.registerEvent("Authme inventory restore", SimpleEvent.class, RestoreInventoryEvent.class, "authme inventory restore");
+        EventValues.registerEventValue(
+            RestoreInventoryEvent.class, Player.class,
+            new Getter<Player, RestoreInventoryEvent>() {
+                @Override
+                @Nullable
+                public Player get(RestoreInventoryEvent e) {
+                    return e.getPlayer();
+                }
+            }, 0);
+        Skript.registerExpression(ExprHashedPasswordOf.class, String.class, ExpressionType.PROPERTY, "[authme] hashed password of %player%");
         Skript.registerEffect(EffAuthForceLogout.class, "[authme] force %player% to log[]out");
         Skript.registerEffect(EffAuthForceLogin.class, "[authme] force %player% to log[]in");
-        Skript.registerEffect(EffAuthForceRegister.class,
-                "[authme] force %player% to register with pass[word] %string%");
+        Skript.registerEffect(EffAuthForceRegister.class, "[authme] force %player% to register with pass[word] %string%");
         Skript.registerEffect(EffAuthForceUnregister.class, "[authme] force %player% to unregister");
-        Skript.registerCondition(CondAuthIsRegisterd.class, "[authme] %player% is registerd");
-        Skript.registerCondition(CondAuthIsNotRegisterd.class, "[authme] %player% is not registerd");
+        Skript.registerCondition(CondAuthIsRegistered.class, "[authme] %player% is registered");
+        Skript.registerCondition(CondAuthIsNotRegistered.class, "[authme] %player% is not registered");
         Skript.registerCondition(CondAuthIsAuth.class, "[authme] %player% is (authenticated|logged [in])");
         Skript.registerCondition(CondAuthIsNotAuth.class, "[authme] %player% is not (authenticated|logged [in])");
     }
