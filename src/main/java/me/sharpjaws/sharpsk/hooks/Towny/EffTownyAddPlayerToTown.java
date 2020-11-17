@@ -22,6 +22,7 @@ public class EffTownyAddPlayerToTown extends Effect {
     public boolean init(Expression<?>[] expr, int matchedPattern, Kleenean paramKleenean,
                         SkriptParser.ParseResult paramParseResult) {
         p = (Expression<OfflinePlayer>) expr[0];
+        s = (Expression<String>) expr[1];
 
         return true;
     }
